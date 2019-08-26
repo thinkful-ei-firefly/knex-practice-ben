@@ -101,4 +101,5 @@ values
         'A etc blog',
         now() - '10 days' :: interval,
         'the most et content ever'
-    );commit;
+    );
+commit;
