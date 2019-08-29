@@ -1,7 +1,7 @@
 const knex = require('knex');
 const ShoppingListService = require('../src/shopping-list-service');
 
-describe('Shopping List service object', () => {
+describe.only('Shopping List service object', () => {
   let db;
 
   let testItems = [
