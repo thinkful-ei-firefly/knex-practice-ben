@@ -80,3 +80,22 @@ where
 
 
 -- 5. List only the managers that are assigned to the 'Watch paint dry' project.
+
+select
+  e.emp_name as managers
+from
+  department d
+join
+  employee e
+on
+  d.manager = e.id
+join
+  employee_project ep
+on
+  e.id = ep.emp_id
+join
+  project p
+on
+  ep.project_id = p.id
+where
+  p.project_name = 'Watch paint dry';
