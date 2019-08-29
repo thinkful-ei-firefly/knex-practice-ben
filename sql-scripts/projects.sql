@@ -57,4 +57,26 @@ and
   
 
 -- 4. Which projects are the Sales department employees assigned to?
+
+select
+  e.emp_name,
+  p.project_name
+from
+  employee e
+join
+  department d
+on
+  e.department = d.id
+join
+  employee_project ep
+on
+  e.id = ep.emp_id
+join
+  project p
+on
+  ep.project_id = p.id
+where
+  d.dept_name = 'Sales';
+
+
 -- 5. List only the managers that are assigned to the 'Watch paint dry' project.
